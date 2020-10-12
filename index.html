@@ -7,7 +7,7 @@
         var wins = prompt("Enter winning numbers separated by a space", "5 8 9 25 29");
         var lucky = prompt("Enter lucky ball number", "1");
 
-        var winsArr = wins.split('-'),
+        var winsArr = wins.split(' '),
             a = winsArr[0], b = winsArr[1], c = winsArr[2], d = winsArr[3], e = winsArr[4];
 
         var one = Math.floor(Math.random() * 48) + 1; 
@@ -45,7 +45,7 @@
             for (j = 0; j < 5; j++){
                 document.write("match: " + match);
                 if (quickArr[i] == winsArr[j]){
-                    match++;
+                    match = match+1;
                     document.write("match adding: " + match);
                 }
             }
